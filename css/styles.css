@@ -406,6 +406,10 @@ h1,h2,h3,h4,h5,h6,ul,p {
     margin-right: 0px;
 }
 
+.projects .item:nth-child(n+7) {
+    margin-bottom: 0px;
+}
+
 .card-content {
     padding: 20px 24px;
     
