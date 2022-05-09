@@ -22,6 +22,8 @@
 
 /* Колір рамки для карток на сторінці потфоліо : #EEEEEE */
 
+/* Колір для іконок соцмереж */
+
 
 
 
@@ -37,6 +39,7 @@
     --hover-color-for-banner-button: #188CE8;
     --header-border-line: #ECECEC;
     --card-border-line: #EEEEEE;
+    --icon-fill:#AFB1B8;
     
 }
 
@@ -158,9 +161,6 @@ h1,h2,h3,h4,h5,h6,ul,p {
 .contact-list {
     margin-left: auto;
     
-    
-    
-    
     display: flex;
     font-weight: 500;
     line-height:  1.14;
@@ -172,15 +172,41 @@ h1,h2,h3,h4,h5,h6,ul,p {
 }
 
 
+
 .contact-list .link {
     color: var(--primary-text-color);
-    
+    display: flex;
+    align-items: center;
 }
+
 
 .contact-list .link:hover, .contact-list .link:focus {
     color: var(--accent-color);
-
 }
+
+.envelope-icon {
+    fill: var(--primary-text-color);
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+}
+
+.smartphone-icon {
+    fill: var(--primary-text-color);
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.contact-list .link:hover .envelope-icon {
+    fill: var(--accent-color);
+}
+
+.contact-list .link:hover .smartphone-icon {
+    fill: var(--accent-color);
+}
+
+
 
 
 
@@ -254,8 +280,17 @@ h1,h2,h3,h4,h5,h6,ul,p {
     letter-spacing: 0.03em;
 }
 
-.section-title.button {
-    display: none;
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 
@@ -278,13 +313,12 @@ h1,h2,h3,h4,h5,h6,ul,p {
     align-items: center;
 }
 
-.detail-attention::before {
+.item.features::before {
 content: '';
 height: 120px;
 display: block;
 margin-bottom: 30px;
 padding: 25px 100px;
-background-image: url(../images/icons/antenna\ .svg);
 background-repeat: no-repeat;
 background-position: center;
 background-color: var(--background-color);
@@ -292,47 +326,23 @@ border-radius: 4px;
 
 }
 
-.punctuality::before {
-    content: '';
-    height: 120px;
-    display: block;
-    margin-bottom: 30px;
-    padding: 25px 100px;
+.item.features:nth-child(1)::before {
+    background-image: url(../images/icons/antenna\ .svg);
+}
+
+.item.features:nth-child(2)::before {
     background-image: url(../images/icons/clock\ .svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--background-color);
-    border-radius: 4px;
-
 }
 
-.planning::before {
-    content: '';
-    height: 120px;
-    display: block;
-    margin-bottom: 30px;
-    padding: 25px 100px;
+.item.features:nth-child(3)::before {
     background-image: url(../images/icons/diagram\ .svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--background-color);
-    border-radius: 4px;
-
 }
 
-.modern-technology::before {
-    content: '';
-    height: 120px;
-    display: block;
-    margin-bottom: 30px;
-    padding: 25px 100px;
+.item.features:nth-child(4)::before {
     background-image: url(../images/icons/astronaut\ .svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--background-color);
-    border-radius: 4px;
-
 }
+
+
 
 .feature-list .item + .item {
     margin-left: 30px;
@@ -401,12 +411,15 @@ border-radius: 4px;
     font-size: 16px;
     line-height: 2;
     letter-spacing: 0.03em;   
+    margin-bottom: 16px;
+    
 }
 
 .team-list-text {
      padding-top: 30px;
      padding-bottom: 30px;
      text-align: center;
+    
 }
 
 .team-list .title, .feature-list .title {
@@ -431,6 +444,93 @@ border-radius: 4px;
 .team-member-picture {
     max-width: 100%;
     display: block;
+}
+
+.web-list {
+    display: flex;
+     padding: 0px 32px;
+     
+    
+    
+}
+
+.web-list-item {
+   
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    
+    
+}
+
+.web-list-item:hover {
+    background-color: var(--accent-color);
+}
+
+
+.web-list .web-list-item + .web-list-item {
+    margin-left: 10px;
+}
+
+.social-networks-icon {
+    
+    fill: var(--icon-fill);
+    
+    width: 22px;
+    height: 22px;
+    
+}
+
+.web-list-item:hover > .social-networks-icon {
+    fill: var(--primary-bg-color);
+}
+
+/* Clients */
+
+.section-title.clients {
+    text-align: center;
+}
+
+.company-list {
+    display: flex;
+}
+
+.clients-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--icon-fill);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.clients-item:hover {
+    border-color: var(--accent-color);
+}
+
+.clients-item:hover .icon-clients {
+    fill: var(--accent-color);
+}
+
+.icon-clients {
+    fill: var(--icon-fill);
+    width: 106px;
+    height: 60px;
+    
+}
+
+.icon-clients:hover {
+     fill: var(--accent-color)
+}
+
+.company-list .clients-item + .clients-item {
+    margin-left: 30px;
 }
 
 /* Projects */
@@ -491,6 +591,8 @@ border-radius: 4px;
 
 /* Buttons */
 
+
+
 .button-list {
     justify-content: center;
     display: flex;
@@ -536,8 +638,57 @@ border-radius: 4px;
     padding-bottom: 60px;
     
     background-color: var(--secondary-bg-color);
-    }
-   
+}
+
+.social-networks-footer {
+    margin-left: 70px;
+}
+
+.social-ntw-icons {
+    width: 22px;
+    height: 22px;
+    fill: var(--primary-bg-color);
+    
+}
+
+.social-networks-list {
+    display: flex;
+}
+
+.container.footer {
+    display: flex;
+    align-items: baseline;
+}
+
+.networks-title {
+    color: var(--primary-bg-color);
+
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.14px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    
+}
+
+.network-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.network-item:hover {
+    background-color: var(--accent-color)
+}
+
+.social-networks-list > .network-item + .network-item {
+    margin-left: 10px;
+}
 
 /* Address */
 
@@ -569,6 +720,7 @@ border-radius: 4px;
 .contact-info.tel {
     margin-bottom: 0px;
 }
+
 
 
 
