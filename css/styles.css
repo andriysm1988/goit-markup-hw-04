@@ -327,19 +327,19 @@ border-radius: 4px;
 }
 
 .item.features:nth-child(1)::before {
-    background-image: url(../images/icons/antenna\ .svg);
+    background-image: url(../images/antenna\ .svg);
 }
 
 .item.features:nth-child(2)::before {
-    background-image: url(../images/icons/clock\ .svg);
+    background-image: url(../images/clock\ .svg);
 }
 
 .item.features:nth-child(3)::before {
-    background-image: url(../images/icons/diagram\ .svg);
+    background-image: url(../images/diagram\ .svg);
 }
 
 .item.features:nth-child(4)::before {
-    background-image: url(../images/icons/astronaut\ .svg);
+    background-image: url(../images/astronaut\ .svg);
 }
 
 
