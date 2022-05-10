@@ -198,11 +198,11 @@ h1,h2,h3,h4,h5,h6,ul,p {
     margin-right: 10px;
 }
 
-.contact-list .link:hover .envelope-icon, .contact-list .link:focus .envelope-icon {
+ .link:hover .envelope-icon,  .link:focus .envelope-icon {
     fill: var(--accent-color);
 }
 
-.contact-list .link:hover .smartphone-icon, .contact-list .link:focus .smartphone-icon{
+.link:hover .smartphone-icon, .link:focus .smartphone-icon{
     fill: var(--accent-color);
 }
 
