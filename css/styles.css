@@ -499,7 +499,7 @@ border-radius: 4px;
     display: flex;
 }
 
-.clients-item {
+.clients-link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -508,34 +508,24 @@ border-radius: 4px;
     border: 1px solid var(--icon-fill);
     border-radius: 4px;
     cursor: pointer;
-}
-
-.clients-item:hover {
-    border-color: var(--accent-color);
-}
-
-
-
-.clients-item:hover .icon-clients {
-    fill: var(--accent-color);
+    fill: var(--icon-fill);
 }
 
 
 .icon-clients {
-    fill: var(--icon-fill);
     width: 106px;
     height: 60px;
-    
 }
 
+.clients-link:hover, .clients-link:focus {
+    fill: var(--accent-color);
+    border-color: var(--accent-color);
+}
 
-
-
-
- 
 .company-list .clients-item + .clients-item {
-    margin-left: 30px;
+    margin-left:30px; 
 }
+
 
 /* Projects */
 
@@ -659,8 +649,6 @@ box-shadow: 14px 13px 24px -8px rgba(0, 0, 0, 0.59);
 .social-ntw-icons {
     width: 22px;
     height: 22px;
-    fill: var(--primary-bg-color);
-    
 }
 
 .social-networks-list {
@@ -683,7 +671,7 @@ box-shadow: 14px 13px 24px -8px rgba(0, 0, 0, 0.59);
     
 }
 
-.network-item {
+.ntw-link {
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -693,14 +681,11 @@ box-shadow: 14px 13px 24px -8px rgba(0, 0, 0, 0.59);
     height: 44px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
-}
-
-.network-item:focus {
-    background-color: var(--accent-color);
+    fill: var(--primary-bg-color);
 }
 
 
-.network-item:hover {
+.ntw-link:hover, .ntw-link:focus {
     background-color: var(--accent-color)
 }
 
