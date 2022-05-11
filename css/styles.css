@@ -185,26 +185,20 @@ h1,h2,h3,h4,h5,h6,ul,p {
 }
 
 .envelope-icon {
-    fill: var(--primary-text-color);
+    fill: currentColor;
     width: 16px;
     height: 12px;
     margin-right: 10px;
 }
 
 .smartphone-icon {
-    fill: var(--primary-text-color);
+    fill: currentColor;
     width: 10px;
     height: 16px;
     margin-right: 10px;
 }
 
- .link:hover .envelope-icon,  .link:focus .envelope-icon {
-    fill: var(--accent-color);
-}
 
-.link:hover .smartphone-icon, .link:focus .smartphone-icon{
-    fill: var(--accent-color);
-}
 
 
 
