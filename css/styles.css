@@ -313,7 +313,16 @@ h1,h2,h3,h4,h5,h6,ul,p {
     align-items: center;
 }
 
-.item.features::before {
+.features-icon {
+    height: 120px;
+    width: 270px;
+    background-color: var(--background-color);
+    padding: 25px 100px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+/* .item.features::before {
 content: '';
 height: 120px;
 display: block;
@@ -340,7 +349,7 @@ border-radius: 4px;
 
 .item.features:nth-child(4)::before {
     background-image: url(../images/astronaut\ .svg);
-}
+} */
 
 
 
@@ -351,6 +360,7 @@ border-radius: 4px;
 
 .feature-list .title {
     color: var(--title-text-color);
+    font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -658,6 +668,7 @@ box-shadow: 14px 13px 24px -8px rgba(0, 0, 0, 0.59);
 .container.footer {
     display: flex;
     align-items: baseline;
+    padding:0;
 }
 
 .networks-title {
